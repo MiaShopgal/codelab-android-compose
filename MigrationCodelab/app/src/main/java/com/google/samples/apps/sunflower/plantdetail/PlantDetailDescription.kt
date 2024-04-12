@@ -19,7 +19,6 @@ package com.google.samples.apps.sunflower.plantdetail
 import android.content.res.Configuration
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -42,6 +41,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import com.google.samples.apps.sunflower.R
 import com.google.samples.apps.sunflower.data.Plant
+import com.google.samples.apps.sunflower.theme.SunflowerTheme
 import com.google.samples.apps.sunflower.viewmodels.PlantDetailViewModel
 
 @Composable
@@ -60,7 +60,7 @@ fun PlantName(name : String) {
          showBackground = true)
 @Composable
 fun PlantNamePreview() {
-    MaterialTheme {
+    SunflowerTheme {
         PlantName(name = "Apple")
     }
 }
@@ -94,7 +94,7 @@ fun PlantDetailContentPreview() {
                       3,
                       30,
                       "")
-    MaterialTheme {
+    SunflowerTheme {
         PlantDetailContent(plant = plant)
     }
 }
@@ -124,7 +124,7 @@ fun PlantWatering(wateringInterval : Int) {
 @Preview(showBackground = true)
 @Composable
 fun PlantWateringPreview() {
-    MaterialTheme {
+    SunflowerTheme {
 //        Column {
         PlantWatering(wateringInterval = 7)
 //            PlantWatering(wateringInterval = 1)
@@ -155,7 +155,7 @@ fun PlantDescription(description : String) {
 @Preview(showBackground = true)
 @Composable
 fun PlantDescriptionPreview() {
-    MaterialTheme {
+    SunflowerTheme {
         PlantDescription(description = "HTML<br><br>description")
     }
 }
